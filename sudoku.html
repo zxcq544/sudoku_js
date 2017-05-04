@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .quad {
+            background-color: #607D8B;
+            /*display: inline-block;*/
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 60px;
+            font-family: fantasy;
+            user-select: none;
+            cursor: default;
+        }
+
+        .quad:hover {
+            background-color: #769aac;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(9, 0fr);
+            grid-gap: 3px;
+            /*padding-left: 21%;*/
+
+            /*width: 32.8%;*/
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            background-color: #303a3f;
+        }
+
+        .small_number {
+            display: inline-block;
+        }
+
+        .small_number:hover {
+            background-color: #7ec1c4;
+            border-radius: 5px;
+        }
+
+        .block_small_numbers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2px;
+            font-size: 19px;
+            font-family: fantasy;
+        }
+
+        .selected {
+            background-color: aqua !important;
+            border-radius: 8px;
+        }
+
+        .deleted {
+            visibility: hidden;
+        }
+
+        .line {
+            background-color: #76b278;
+        }
+        #fill_empty_button{
+            display: inline;
+        }
+        .big_container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .button_block{
+            display: grid;
+            grid-template-rows: repeat(4,0fr);
+        }
+        .button{
+                margin: 25px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--<ul class="block_small_numbers">
+            <li class="small_number selected">1</li>
+            <li class="small_number deleted">2</li>
+            <li class="small_number">3</li>
+            <li class="small_number">4</li>
+            <li class="small_number">5</li>
+            <li class="small_number">6</li>
+            <li class="small_number">7</li>
+            <li class="small_number">8</li>
+            <li class="small_number">9</li>
+        </ul>-->
+<div class="big_container">
+<div class="button_block">
+<button id="fill_empty_button" class="button">Fill Empty Cells</button>
+<button class="button">Clear horizontal</button>
+<button class="button">Clear vertical</button>
+<button class="button">Clear quad</button>
+</div>
+<div class="container">    
+    <div class="quad" data-id="0">0</div>
+    <div class="quad" data-id="1">0</div>
+    <div class="quad" data-id="2">9</div>
+    <div class="quad" data-id="3">0</div>
+    <div class="quad" data-id="4">0</div>
+    <div class="quad" data-id="5">0</div>
+    <div class="quad" data-id="6">3</div>
+    <div class="quad" data-id="7">0</div>
+    <div class="quad" data-id="8">4</div>
+    <div class="quad " data-id="9">0</div>
+    <div class="quad" data-id="10">0</div>
+    <div class="quad" data-id="11">7</div>
+    <div class="quad" data-id="12">2</div>
+    <div class="quad" data-id="13">1</div>
+    <div class="quad" data-id="14">0</div>
+    <div class="quad" data-id="15">0</div>
+    <div class="quad" data-id="16">0</div>
+    <div class="quad" data-id="17">0</div>
+    <div class="quad" data-id="18">0</div>
+    <div class="quad" data-id="19">0</div>
+    <div class="quad" data-id="20">0</div>
+    <div class="quad" data-id="21">0</div>
+    <div class="quad" data-id="22">0</div>
+    <div class="quad" data-id="23">3</div>
+    <div class="quad" data-id="24">8</div>
+    <div class="quad" data-id="25">0</div>
+    <div class="quad" data-id="26">0</div>
+    <div class="quad" data-id="27">9</div>
+    <div class="quad" data-id="28">0</div>
+    <div class="quad" data-id="29">0</div>
+    <div class="quad" data-id="30">5</div>
+    <div class="quad" data-id="31">0</div>
+    <div class="quad" data-id="32">0</div>
+    <div class="quad" data-id="33">0</div>
+    <div class="quad" data-id="34">6</div>
+    <div class="quad" data-id="35">0</div>
+    <div class="quad" data-id="36">0</div>
+    <div class="quad" data-id="37">1</div>
+    <div class="quad" data-id="38">0</div>
+    <div class="quad" data-id="39">0</div>
+    <div class="quad" data-id="40">8</div>
+    <div class="quad" data-id="41">0</div>
+    <div class="quad" data-id="42">0</div>
+    <div class="quad" data-id="43">3</div>
+    <div class="quad" data-id="44">0</div>
+    <div class="quad" data-id="45">0</div>
+    <div class="quad" data-id="46">7</div>
+    <div class="quad" data-id="47">0</div>
+    <div class="quad" data-id="48">0</div>
+    <div class="quad" data-id="49">0</div>
+    <div class="quad" data-id="50">9</div>
+    <div class="quad" data-id="51">0</div>
+    <div class="quad" data-id="52">0</div>
+    <div class="quad" data-id="53">8</div>
+    <div class="quad" data-id="54">0</div>
+    <div class="quad" data-id="55">0</div>
+    <div class="quad" data-id="56">5</div>
+    <div class="quad" data-id="57">3</div>
+    <div class="quad" data-id="58">0</div>
+    <div class="quad" data-id="59">0</div>
+    <div class="quad" data-id="60">0</div>
+    <div class="quad" data-id="61">0</div>
+    <div class="quad" data-id="62">0</div>
+    <div class="quad" data-id="63">0</div>
+    <div class="quad" data-id="64">0</div>
+    <div class="quad" data-id="65">0</div>
+    <div class="quad" data-id="66">0</div>
+    <div class="quad" data-id="67">2</div>
+    <div class="quad" data-id="68">7</div>
+    <div class="quad" data-id="69">6</div>
+    <div class="quad" data-id="70">0</div>
+    <div class="quad" data-id="71">0</div>
+    <div class="quad" data-id="72">3</div>
+    <div class="quad" data-id="73">0</div>
+    <div class="quad" data-id="74">6</div>
+    <div class="quad" data-id="75">0</div>
+    <div class="quad" data-id="76">0</div>
+    <div class="quad" data-id="77">0</div>
+    <div class="quad" data-id="78">2</div>
+    <div class="quad" data-id="79">0</div>
+    <div class="quad" data-id="80">0</div>
+</div>
+<div class="button_block">
+<button id="fill_empty_button" class="button">Fill Empty Cells</button>
+</div>
+</div>
+</body>
+<script src="game.js"></script>
+</html>
