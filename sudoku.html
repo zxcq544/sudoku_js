@@ -127,9 +127,17 @@
         .button_block{
             display: grid;
             grid-template-rows: repeat(4,0fr);
+            position:sticky;
+            top:0px;
         }
         .button{
                 margin: 25px;
+        }
+        .border_right{
+            border-right: 3px solid red;
+        }
+        .border_bottom{
+            border-bottom: 3px solid red;
         }
 
     </style>
@@ -148,97 +156,106 @@
             <li class="small_number">9</li>
         </ul>-->
 <div class="big_container">
+<div>
 <div class="button_block">
+
 <button id="fill_empty_button" class="button">Fill Empty Cells</button>
-<button class="button">Clear horizontal</button>
-<button class="button">Clear vertical</button>
-<button class="button">Clear quad</button>
+<button id="clear_horizontal_button" class="button">Clear horizontal</button>
+<button id="clear_vertical_button" class="button">Clear vertical</button>
+<button id="clear_quad_button" class="button">Clear quad</button>
+
+</div>
 </div>
 <div class="container">    
+
     <div class="quad" data-id="0">0</div>
     <div class="quad" data-id="1">0</div>
-    <div class="quad" data-id="2">9</div>
+    <div class="quad border_right" data-id="2">9</div>
     <div class="quad" data-id="3">0</div>
     <div class="quad" data-id="4">0</div>
-    <div class="quad" data-id="5">0</div>
+    <div class="quad border_right" data-id="5">0</div>
     <div class="quad" data-id="6">3</div>
     <div class="quad" data-id="7">0</div>
     <div class="quad" data-id="8">4</div>
     <div class="quad " data-id="9">0</div>
     <div class="quad" data-id="10">0</div>
-    <div class="quad" data-id="11">7</div>
+    <div class="quad border_right" data-id="11">7</div>
     <div class="quad" data-id="12">2</div>
     <div class="quad" data-id="13">1</div>
-    <div class="quad" data-id="14">0</div>
+    <div class="quad border_right" data-id="14">0</div>
     <div class="quad" data-id="15">0</div>
     <div class="quad" data-id="16">0</div>
     <div class="quad" data-id="17">0</div>
-    <div class="quad" data-id="18">0</div>
-    <div class="quad" data-id="19">0</div>
-    <div class="quad" data-id="20">0</div>
-    <div class="quad" data-id="21">0</div>
-    <div class="quad" data-id="22">0</div>
-    <div class="quad" data-id="23">3</div>
-    <div class="quad" data-id="24">8</div>
-    <div class="quad" data-id="25">0</div>
-    <div class="quad" data-id="26">0</div>
+    <div class="quad border_bottom" data-id="18">0</div>
+    <div class="quad border_bottom" data-id="19">0</div>
+    <div class="quad border_right border_bottom" data-id="20">0</div>
+    <div class="quad border_bottom" data-id="21">0</div>
+    <div class="quad border_bottom" data-id="22">0</div>
+    <div class="quad border_right border_bottom" data-id="23">3</div>
+    <div class="quad border_bottom" data-id="24">8</div>
+    <div class="quad border_bottom" data-id="25">0</div>
+    <div class="quad border_bottom" data-id="26">0</div>
     <div class="quad" data-id="27">9</div>
-    <div class="quad" data-id="28">0</div>
-    <div class="quad" data-id="29">0</div>
+    <div class="quad " data-id="28">0</div>
+    <div class="quad border_right" data-id="29">0</div>
     <div class="quad" data-id="30">5</div>
     <div class="quad" data-id="31">0</div>
-    <div class="quad" data-id="32">0</div>
+    <div class="quad border_right" data-id="32">0</div>
     <div class="quad" data-id="33">0</div>
     <div class="quad" data-id="34">6</div>
     <div class="quad" data-id="35">0</div>
     <div class="quad" data-id="36">0</div>
     <div class="quad" data-id="37">1</div>
-    <div class="quad" data-id="38">0</div>
+    <div class="quad border_right" data-id="38">0</div>
     <div class="quad" data-id="39">0</div>
     <div class="quad" data-id="40">8</div>
-    <div class="quad" data-id="41">0</div>
+    <div class="quad border_right" data-id="41">0</div>
     <div class="quad" data-id="42">0</div>
     <div class="quad" data-id="43">3</div>
     <div class="quad" data-id="44">0</div>
-    <div class="quad" data-id="45">0</div>
-    <div class="quad" data-id="46">7</div>
-    <div class="quad" data-id="47">0</div>
-    <div class="quad" data-id="48">0</div>
-    <div class="quad" data-id="49">0</div>
-    <div class="quad" data-id="50">9</div>
-    <div class="quad" data-id="51">0</div>
-    <div class="quad" data-id="52">0</div>
-    <div class="quad" data-id="53">8</div>
+    <div class="quad border_bottom" data-id="45">0</div>
+    <div class="quad border_bottom" data-id="46">7</div>
+    <div class="quad border_right border_bottom" data-id="47">0</div>
+    <div class="quad border_bottom" data-id="48">0</div>
+    <div class="quad border_bottom" data-id="49">0</div>
+    <div class="quad border_right border_bottom" data-id="50">9</div>
+    <div class="quad border_bottom" data-id="51">0</div>
+    <div class="quad border_bottom" data-id="52">0</div>
+    <div class="quad border_bottom" data-id="53">8</div>
     <div class="quad" data-id="54">0</div>
     <div class="quad" data-id="55">0</div>
-    <div class="quad" data-id="56">5</div>
+    <div class="quad border_right" data-id="56">5</div>
     <div class="quad" data-id="57">3</div>
     <div class="quad" data-id="58">0</div>
-    <div class="quad" data-id="59">0</div>
+    <div class="quad border_right" data-id="59">0</div>
     <div class="quad" data-id="60">0</div>
     <div class="quad" data-id="61">0</div>
     <div class="quad" data-id="62">0</div>
     <div class="quad" data-id="63">0</div>
     <div class="quad" data-id="64">0</div>
-    <div class="quad" data-id="65">0</div>
+    <div class="quad border_right" data-id="65">0</div>
     <div class="quad" data-id="66">0</div>
     <div class="quad" data-id="67">2</div>
-    <div class="quad" data-id="68">7</div>
+    <div class="quad border_right" data-id="68">7</div>
     <div class="quad" data-id="69">6</div>
     <div class="quad" data-id="70">0</div>
     <div class="quad" data-id="71">0</div>
     <div class="quad" data-id="72">3</div>
     <div class="quad" data-id="73">0</div>
-    <div class="quad" data-id="74">6</div>
+    <div class="quad border_right" data-id="74">6</div>
     <div class="quad" data-id="75">0</div>
     <div class="quad" data-id="76">0</div>
-    <div class="quad" data-id="77">0</div>
+    <div class="quad border_right" data-id="77">0</div>
     <div class="quad" data-id="78">2</div>
     <div class="quad" data-id="79">0</div>
     <div class="quad" data-id="80">0</div>
 </div>
+
+<div>
 <div class="button_block">
-<button id="fill_empty_button" class="button">Fill Empty Cells</button>
+
+<button id="fill_draft_button" class="button">Fill Draft</button>
+</div>
 </div>
 </div>
 </body>
