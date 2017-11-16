@@ -97,6 +97,8 @@ for(i=0; i <9*9;i++){
             gui_game_field[j*9 + current_column].className = str2.replace(/ line /gi,"");
             gui_game_field[j*9 + current_column].className+=" line ";
         }
+
+               
         
         previous_selected_quad_id = id;
         previous_selected_quad_row = current_row;
@@ -144,7 +146,8 @@ function draw_field(){
                 for (var k = 0; k < 9; k++) {                    
                     elements[k] = document.createElement("li");
                     elements[k].className = "small_number";
-                    elements[k].innerHTML = game_field[i][j][k];
+                    //elements[k].innerHTML = game_field[i][j][k];
+                    elements[k].innerHTML = k+1;
                     if(game_field[i][j][k]==0){
                         elements[k].className+=" deleted ";
                     }
@@ -272,4 +275,9 @@ fill_draft_button.onclick = function(event){
     draw_field();
     //clear_horizontal();
     
+}
+
+var log_game_field_to_console_button = document.getElementById("log_game_field_to_console");
+log_game_field_to_console.onclick = function(event){
+    console.log(game_field);
 }
